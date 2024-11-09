@@ -13,6 +13,8 @@ class heap{
 /*
  * Exercicio resolvido 4
  * void metodo(int i){
- *  
+ *  for(; i>=1; i/=2){
+ *  System.out.println(array[i])
+ * }
  * }
  */
