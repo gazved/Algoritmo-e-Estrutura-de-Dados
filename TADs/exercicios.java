@@ -70,7 +70,10 @@ public void mostrarSoma(){
     }
     System.out.println(soma);
 }
-
+/*faça o exercicio anterior de forma recursiva */
+  public void mostrarSomarec(int soma){
+    
+  }
 }
 
 
