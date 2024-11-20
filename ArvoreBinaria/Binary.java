@@ -119,5 +119,5 @@ class ArvoreBinaria{
     }
 
     //Insira 1000 elementos de forma aleatoria. Para cada inserção, mostre na tela o número de elementos da arvore. o log desse numero e a altura da arvore;
-
+    
 }
