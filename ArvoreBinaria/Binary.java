@@ -118,6 +118,28 @@ class ArvoreBinaria{
         return altura;
     }
 
-    //Insira 1000 elementos de forma aleatoria. Para cada inserção, mostre na tela o número de elementos da arvore. o log desse numero e a altura da arvore;
+    //faça um metodo que retorne a soma dos elementos da arvores
+
+    public int soma(){
+        return soma(raiz);
+    }
+    public int soma(No i){
+        int resp =0;
+        if(i != null){
+            resp = i.elemento + soma(i.esq) + soma(i.dir);
+
+        }
+        return resp;
+    }
+
+    // faça um metodo que retorne o numero de elementos pares existentes na arvore
+
+    public int numPares(){
+        return numPares(raiz);
+    }
+
+    public int numPares(No i){
+        
+    }
     
 }
