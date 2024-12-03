@@ -102,6 +102,31 @@ class ArvoreBinaria{
             caminharCentral(i.dir);
         }
     }
+    //vai ao maximo possivel para a esquerda, depois imprime e depois direita
+
+
+
+
+    //caminhar pos-fixado ou pos-ordem
+
+    void CaminharPos(No i){
+        if(i!=null){
+            CaminharPos(i.esq);
+            CaminharPos(i.dir);
+            System.err.println(i.elemento+ " ");
+
+        }
+    }
+
+    //caminhamento pre-fixado ou pre ordem
+
+    void CaminharPre(No i){
+        if(i != null){
+            System.out.println(i.elemento+ "");
+            CaminharPre(i.esq);
+            CaminharPre(i.dir);
+        }
+    }
 
 
 
@@ -132,14 +157,57 @@ class ArvoreBinaria{
         return resp;
     }
 
-    // faça um metodo que retorne o numero de elementos pares existentes na arvore
-
-    public int numPares(){
-        return numPares(raiz);
+    //metodo para remover 
+    void remover(int x) throws Exception {
+        raiz = remover(x, raiz);
+    }
+    
+    No remover(int x, No i) throws Exception {
+        if (i == null) {
+            throw new Exception("Erro!");
+        } else if (x < i.elemento) {//busca pela esquerda
+            i.esq = remover(x, i.esq);
+        } else if (x > i.elemento) {//busca pela direita
+            i.dir = remover(x, i.dir);
+        } else if (i.dir == null) {// nesta linha, o item desejado ja foi encontrado
+            i = i.esq;
+        } else if (i.esq == null) {
+            i = i.dir;
+        } else {
+            i.esq = maiorEsq(i, i.esq);//caso o elemento seja um nó com dois filhos
+        }
+        return i;
+    }
+    
+    No maiorEsq(No i, No j) {
+        if (j.dir == null) {
+            i.elemento = j.elemento;
+            j = j.esq;
+        } else {
+            j.dir = maiorEsq(i, j.dir);
+        }
+        return j;
     }
 
-    public int numPares(No i){
+    //Arvaores AVL
+
+
+public int CalcNiveis(No i){
+    if(i == null){
+        return 0;
+    }
+    else{
+        int altEsq = CalcNiveis(i.esq);
+        int altDir = CalcNiveis(i.dir);
+        int altura = (altEsq>altDir) ? altEsq +1 : altDir+1;
+        i.altura = altura; 
+
+        return altura;
         
     }
+}
+   
+
+    
     
 }
