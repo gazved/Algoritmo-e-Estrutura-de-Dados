@@ -1,4 +1,4 @@
-package avl;
+package ArvoreBinaria.avl;
 
 class No {
 	public int elemento; // Conteudo do no.

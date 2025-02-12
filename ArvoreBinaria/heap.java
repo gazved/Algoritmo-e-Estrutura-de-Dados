@@ -1,3 +1,4 @@
+package ArvoreBinaria;
 class heap{
     public static void main(String args[]){
         //array[i] é a raiz

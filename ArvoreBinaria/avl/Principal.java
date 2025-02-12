@@ -1,4 +1,4 @@
-package avl;
+package ArvoreBinaria.avl;
 
 public class Principal {
 	public static void main(String[] args) {

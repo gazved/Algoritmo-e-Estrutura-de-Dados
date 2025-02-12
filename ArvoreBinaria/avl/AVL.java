@@ -1,4 +1,4 @@
-package avl;
+package ArvoreBinaria.avl;
 
 public class AVL {
 	private No raiz; // Raiz da arvore.
