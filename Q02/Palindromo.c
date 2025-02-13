@@ -25,15 +25,15 @@ int Ispal(char*princ){
 
 int main(){
     char princ[100];
-    scanf("%[^\n]", princ);
+    fgets(princ, sizeof(princ), stdin);
     
     while(princ[0]!='F' && princ[1]!='I'&& princ[2]!='M'){
         if(Ispal(princ)){
-            printf("SIM");
+            printf("SIM\n");
         }else{
-            printf("NAO");
+            printf("NAO\n");
         }
-        scanf("%[^\n]", princ);
+        fgets(princ, sizeof(princ), stdin);
         
     }
     return 0;
