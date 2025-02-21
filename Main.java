@@ -7,19 +7,20 @@ public class Main {
         double preco;
         String duracao;
         String cidade;
-        id = sc.nextInt();
-        while(id!=0){
+        
+        while((id = scanner.nextInt)!=0){
             preco = sc.nextDouble();
             duracao = sc.next();
             Duracao duracaoo = new Duracao(duracao);
             cidade = sc.nextLine().trim();
-            imprimir();
-            id = sc.nextInt();
+            imprimir(id, preco, cidade, duracaoo, duracao);
+            
         }
+        sc.close();
         
     }
 
-    void imprimir(int id, double preco, String cidade, Duracao duracaoo, String duracao){
+    static void imprimir(int id, double preco, String cidade, Duracao duracaoo, String duracao){
 
         System.out.printf("%i %f",id, preco );
         duracaoo.imprimir(duracao);
