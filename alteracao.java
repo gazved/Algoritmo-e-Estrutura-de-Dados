@@ -1,4 +1,4 @@
-package Q04;
+
 import java.util.*;
 
 public class alteracao {
